@@ -41,22 +41,22 @@
                             <label for="Clothes">Clothes:
                                 <input class="my-3 ml-2"  id="Clothes" type="text" placeholder="500" >
                             </label>
-                            <label for="">
-                                <input type="button" class="text-white bg-yellow-500 py-1 px-5 mb-3 mt-1 ml-2 rounded-lg hover:bg-yellow-600"  value="Calculate">
+                            <label>
+                                <input id="calc-btn" type="button" class="text-white bg-yellow-500 py-1 px-5 mb-3 mt-1 ml-2 rounded-lg hover:bg-yellow-600"  value="Calculate">
                             </label>
                         </div>
-                        <p class="my-1">Total Expenses : 5500</p>
-                        <p>Balance: 4500</p>
+                        <p class="my-1">Total Expenses : <span id="total-spend">5500</span></p>
+                        <p>Balance: <span id="remaining-balance">4500</span></p>
                         <div>
                             <label for="save">Save
-                                <input class=" mx-2" type="text" name="" id="" placeholder="20">
-                                % <input class="text-white bg-yellow-500 py-1 px-5 my-3 ml-2 rounded-lg hover:bg-yellow-600" type="button" value="Save">
+                                <input class="mx-2" type="text" name="" id="save" placeholder="20">
+                                % <input id="save-btn" class="text-white bg-yellow-500 py-1 px-5 my-3 ml-2 rounded-lg hover:bg-yellow-600" type="button" value="Save">
         
                             </label>
                         </div>
-                        <p>Saving Amount : 2000</p>
+                        <p>Saving Amount : <span id="save-field">2000</span></p>
                         <p class="mt-2 pb-5">
-                            Remaining Balance : 2500
+                            Remaining Balance : <span id="remain-field">2500</span>
                         </p>
                     </form>
                 </div>
@@ -66,5 +66,6 @@
     </article>
     <script src="/js/main.js"></script>
     <script src="/utilities/utilities.js"></script>
+    <script src="/js/moneyCalc.js"></script>
 </body>
 </html>
