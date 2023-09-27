@@ -51,11 +51,13 @@ document.getElementById('save-btn').addEventListener('click', function () {
         }
         else {
             const savings = (save / 100) * rBalance;
-            console.log(savings);
+           const finalS= savings.toFixed(2);
+          //  console.log(savings);
             const remain = rBalance - savings;
-            console.log(remain);
-            setValuesById('save-field', savings);
-            setValuesById('remain-field', remain);
+          const finalR=  remain.toFixed(2);
+           // console.log(remain);
+            setValuesById('save-field', finalS);
+            setValuesById('remain-field', finalR);
             setTextFieldEmpty();
         }
     }
