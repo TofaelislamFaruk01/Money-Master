@@ -1,15 +1,14 @@
-console.log(67);
+//console.log(67);
 
 
 // get values from textbox
 
-function getValueById(boxId)
-{
+function getValueById(boxId) {
     const boxValue = document.getElementById(boxId);
     const boxValueStng = boxValue.value;
+    
     const value = parseInt(boxValueStng);
-    console.log(value);
-    return value;
+        return value;
 }
 
 // get innertext from text field

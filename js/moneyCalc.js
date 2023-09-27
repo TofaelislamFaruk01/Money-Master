@@ -4,17 +4,19 @@ document.getElementById('calc-btn').addEventListener('click', function () {
 
 
     const incomeAmount = getValueById('income');
-    console.log(incomeAmount);
+  //  console.log(incomeAmount);
     const foodSpend = getValueById('Food');
-    console.log(foodSpend);
+  //  console.log(foodSpend);
     const rentSpend = getValueById('Rent');
-    console.log(rentSpend);
+   // console.log(rentSpend);
     const clothesSpend = getValueById('Clothes');
-    console.log(clothesSpend);
+   // console.log(clothesSpend);
     
     const totalSpend = foodSpend + rentSpend + clothesSpend;
-    console.log(totalSpend);
-    
+  //  console.log(totalSpend);
+
+    if (incomeAmount >= 0 && foodSpend >= 0 && rentSpend >= 0 && clothesSpend >= 0)
+{
     if (totalSpend <= incomeAmount)
     {
         const remainingBalance = incomeAmount - totalSpend;
@@ -25,6 +27,12 @@ document.getElementById('calc-btn').addEventListener('click', function () {
     {
         alert('spend amount can not greater than income');
         setTextFieldEmpty();
+    }
+    }
+    else
+    {
+        alert('amount must be positive number');
+        setTextFieldEmpty();
         }
 })
 
@@ -33,26 +41,29 @@ document.getElementById('calc-btn').addEventListener('click', function () {
 document.getElementById('save-btn').addEventListener('click', function () {
     
     const rBalance = getInnerTextById('remaining-balance');
-    console.log(rBalance);
+  //  console.log(rBalance);
     const save = getValueById('save');
-    console.log(save);
-    if (save >= 100)
-    {
-        alert('save % can not be greater or equal to 100');
-    }
-    else if (save > rBalance)
-    {
-        alert('savings amount can not be greater than remaining Balance');
+  //  console.log(save);
+    if (save >= 0) {
+        if (save >= 100) {
+            alert('savings can not be greater or equal to 100');
+            document.getElementById('save').value = '';
+        }
+        else {
+            const savings = (save / 100) * rBalance;
+            console.log(savings);
+            const remain = rBalance - savings;
+            console.log(remain);
+            setValuesById('save-field', savings);
+            setValuesById('remain-field', remain);
+            setTextFieldEmpty();
+        }
     }
     else {
-        const savings = (save / 100) * rBalance;
-        console.log(savings);
-        const remain = rBalance - savings;
-        console.log(remain);
-        setValuesById('save-field', savings);
-        setValuesById('remain-field', remain);
-        setTextFieldEmpty();
+        alert('amount must be positive number');
+        document.getElementById('save').value = '';
     }
+
 })
 
         
