@@ -17,3 +17,10 @@ for (pGraph of pGraphs)
 {
     pGraph.style.fontWeight = 'bold';
 }
+
+const image = document.getElementById('image');
+image.style.width = 'fitContent';
+image.style.height = 'fitContent';
+
+const dollar = document.getElementById('dollar');
+dollar.style.color='rgb(171, 169, 49)';
