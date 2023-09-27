@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Master</title>
+    <!-- tailwind css link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome connect link -->
+    <script src="https://kit.fontawesome.com/17e9c7a115.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body class="text-center bg-slate-200 mx-auto">
+    <article class="bg-white mt-5 p-5">
+        <header>
+            <h1 class="font-extrabold my-5 text-2xl">Money Master<i style="color: rgb(171, 169, 49);"
+                    class="fa-solid fa-sack-dollar"></i></h1>
+        </header>
+        <main>
+            <section class="grid grid-cols-2 gap-4 m-3">
+                <div>
+                    <img class="mx-auto" style="width:fit-content ; height:fit-content;" src="/money.png" alt="" srcset="">
+                </div>
+                <div>
+                    <form class="bg-slate-200">
+                        <div>
+                            <p class="pt-4">Income</p>
+        
+                            <label class="my-3"  for="income">Income:
+                                <input class="ml-2 " id="income" type="text" placeholder="10000">
+                            </label>
+                        </div>
+                        <div>
+                            <p>Expenses</p>
+                            <label for="Food">Food:
+                                <input class="my-3 ml-2" id="Food" type="text" placeholder="3000">
+                            </label>
+                            <label for="Rent">Rent:
+                                <input class=" ml-2"  id="Rent" type="text"
+                                placeholder="2000">
+                            </label>
+                            <label for="Clothes">Clothes:
+                                <input class="my-3 ml-2"  id="Clothes" type="text" placeholder="500" >
+                            </label>
+                            <label for="">
+                                <input type="button" class="text-white bg-yellow-500 py-1 px-5 mb-3 mt-1 ml-2 rounded-lg hover:bg-yellow-600"  value="Calculate">
+                            </label>
+                        </div>
+                        <p class="my-1">Total Expenses : 5500</p>
+                        <p>Balance: 4500</p>
+                        <div>
+                            <label for="save">Save
+                                <input class=" mx-2" type="text" name="" id="" placeholder="20">
+                                % <input class="text-white bg-yellow-500 py-1 px-5 my-3 ml-2 rounded-lg hover:bg-yellow-600" type="button" value="Save">
+        
+                            </label>
+                        </div>
+                        <p>Saving Amount : 2000</p>
+                        <p class="mt-2 pb-5">
+                            Remaining Balance : 2500
+                        </p>
+                    </form>
+                </div>
+            </section>
+        
+        </main>
+    </article>
+</body>
+</html>

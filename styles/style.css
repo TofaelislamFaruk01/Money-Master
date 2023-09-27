@@ -1,0 +1,12 @@
+ body {
+     text-align: center;
+     width: 60%;
+ }
+
+ label {
+     display: block;
+ }
+
+ p {
+     font-weight: bold;
+ }
